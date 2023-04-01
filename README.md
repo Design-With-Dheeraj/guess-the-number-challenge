@@ -1,0 +1,3 @@
+# Guess The Number Chalenge
+![Html Css Javascript Project](https://user-images.githubusercontent.com/120724794/229273345-c01880cb-fc63-4d34-9a99-d74e68ec8012.png)
+😎 As a web developer, I recently created a "Guess the Number" challenge using HTML, CSS, and JavaScript. The game challenges users to guess a randomly generated number within a certain range, providing hints and feedback along the way. This project demonstrates my skills in developing interactive web applications that engage and challenge users. By using HTML, CSS, and JavaScript, I was able to create an intuitive and visually appealing user interface that enhances the user experience.
