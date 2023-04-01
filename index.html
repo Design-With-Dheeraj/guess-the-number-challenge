@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guess The Number Game</title>
+	<!-- Fontawesome Kit -->
+	<script src="https://kit.fontawesome.com/a656fffa44.js" crossorigin="anonymous"></script>
+	<!-- StyleSheet CSS Link -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div class="main">
+		<img src="pattern/Rhône.png" class="pattern1" alt="">
+		<img src="pattern/Oreti.png" class="pattern2">
+		
+
+		<div id="fade" class="fade"></div>
+		<div class="rule_box" id="rule_box">
+			<button onclick="closeRule()"><i class="fa-solid fa-square-xmark"></i></button>
+			<div class="rule_box_content">
+				<h1 style="text-align: center; text-transform: uppercase;">Rule Book</h1>
+				<nav>
+					<h2 class="rule_box_heading">Rules</h2>
+					<li>Rule 1 - Click on the generate button which will generate a random number between 0 to 50 and that number will be shown only if your guess is correct.</li>
+					<li>Rule 2 - After clicking on the generate button, guess the number in the input field and click on the check button to see whether your guess is correct or not.</li>
+					<li>Rule 3 - Keep in mind that the check button will not work until you click on the generate button.</li>
+					<li>Rule 4 - You only have 10 chances.</li>
+					<h2 class="rule_box_heading">Advantage</h2>
+					<li>When you guess your number, you will get to see whether your number is greater or smaller than the random number. So that it will be easy for you to guess the number.</li>
+				</nav>
+			</div>
+		</div>
+		<div class="container">
+			<h1 style="text-align: center; text-transform: uppercase;" class="container_head">Guess The Number Challenge</h1>
+			<div class="game_box">
+				<div class="box_side side1">
+					<div class="btn_container">	
+						<button class="btn generateBtn" id="generateBtn" onclick="generate()">Generate</button>
+						<div class="guess_input">
+							<input type="text" id="guessInput" placeholder="Type The Value (0 To 50)">
+							<button class="btn promptBtn" id="promptBtn" onclick="checkBtn()">Check <i class="fa-solid fa-paper-plane"></i></button>
+						</div>
+					</div>
+					<div class="inner_box">
+						<div class="chance_box inner_box_content">
+							<p>You Have<br><span id="chance_number"></span><br>Chance Left</p>
+						</div>
+						<div class="randomAnswer inner_box_content">
+							<p>Random Number is<br><span id="random_number"></span></p>
+						</div>
+					</div>
+					<div class="hint_box">
+						<p id="hint_content"><i class="fa-solid fa-lightbulb"></i> Hint Show Here</p>
+					</div>
+				</div>
+
+				<div class="box_side side2">
+					<div class="result_box">
+						<h1>Result</h1>
+						<p id="result" class="result_show"></p>
+						<div class="refesh_page_main">
+							<p class="auto_refesh_content" id="refresh_text">page will be refesh automatically in <span id="refresh_count"></span> second</p>
+							<button class="btn refreshBtn" onclick="location.reload();"><i class="fa-solid fa-rotate-right"></i> Refresh</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="rule_box_btn">
+				<button class="ruleBookBtn" onclick="openRule()">Rule Book <i class="fa-solid fa-book"></i></button>
+			</div>
+		</div>
+
+
+		<div class="creator_info_box">	
+			<img src="img/profile-pic.png" class="profilePic">
+			<p>created by <a href="https://dheerajdev.netlify.app/" target="_blank">dheerajdev</a></p>
+		</div>
+
+
+	</div>
+
+
+
+	<!-- Javascript Link -->
+	<script src="javascript.js"></script>
+
+</body>
+</html>

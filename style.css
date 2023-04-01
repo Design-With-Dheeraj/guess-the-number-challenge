@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.main
+{
+	widows: 1540px;
+	height: 100vh;
+	background:rgb(240, 240, 240);
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pattern1
+{
+	position: absolute;
+	width: 1000px;
+	height: auto;
+	transform: rotate(45deg);
+	left: -40%;
+	top: -20%;
+}
+
+.pattern2
+{
+	position: absolute;
+	width: 1000px;
+	height: auto;
+	right: -20%;
+}
+
+.creator_info_box
+{
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50px;
+	box-shadow: 0 0 0 rgba(35,35,35, 0.8);
+	background: #fff;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	transition: 0.5s;
+	overflow: hidden;
+
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse
+{
+	0% 
+	{
+		box-shadow: 0 0 0 0 rgba(35,35,35, 0.8);
+	}
+
+	70% 
+	{
+		box-shadow: 0 0 0 10px rgba(35,35,35, 0);
+	}
+
+	100% 
+	{
+		box-shadow: 0 0 0 0 rgba(35,35,35, 0);
+	}
+}
+
+.creator_info_box:hover
+{
+	width: 220px;
+	border-radius: 35px;
+}
+
+.creator_info_box p
+{
+	color: #000;
+	text-transform: capitalize;
+	margin-right: 10px;
+	transition: 0.5s;
+	opacity: 0;
+	font-size: 14px;
+}
+
+.creator_info_box p a
+{
+	color: #000;
+	font-weight: 800;
+}
+
+.creator_info_box:hover p
+{
+	opacity: 1;
+}
+
+
+.profilePic
+{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 50px;
+	height: auto;
+	transition: 0.5s;
+	z-index: 1;
+}
+
+.creator_info_box:hover .profilePic
+{
+	left: 5px;
+	transform: translate(0);
+}
+
+.fade
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(35, 35, 35, 0.5);
+	z-index: 2;
+	display: none;
+}
+
+.container
+{
+	width: auto;
+	position: relative;
+}
+
+.rule_box
+{
+	position: absolute;
+	background: white;
+	top: 0;
+	bottom: 0;
+	left: -40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	padding: 0 40px;
+	z-index: 999;
+	transition: 0.5s, opacity 300ms ease-in-out;
+}
+
+.openRuleBook
+{
+	left: 0%;
+}
+
+.fa-square-xmark
+{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.rule_box .rule_box_content nav .rule_box_heading
+{
+	margin-top: 40px;
+}
+
+.rule_box .rule_box_content nav li
+{
+	list-style: none;
+	margin: 12px 0;
+}
+
+.container .game_box
+{
+	width: 680px;
+	height: 350px;
+	border-radius: 30px;
+	background: rgba(240, 240, 240, 0.4);
+	backdrop-filter: blur(10px);
+	box-shadow: 15px 15px 30px rgba(35, 35, 35, 0.4);
+	position: relative;
+	margin-top: 20px;
+	padding: 20px;
+	display: flex;
+}
+
+.game_box .box_side
+{
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.game_box .side2
+{
+	border-left: 2px dotted black;
+}
+
+.box_side .result_box h1
+{
+	text-align: center;
+	margin-top: 4px;
+	text-decoration: underline;
+	letter-spacing: 2px;
+}
+
+.box_side .inner_box
+{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.inner_box .inner_box_content p
+{
+	text-align: center;
+	font-weight: 700;
+}
+
+.inner_box .inner_box_content #random_number
+{
+	opacity: 0;
+}
+
+.inner_box .inner_box_content p span
+{
+	font-size: 52px;
+}
+
+.game_box .box_side .btn_container
+{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.btn_container .guess_input
+{
+	display: flex;
+	align-items: center;
+}
+
+.guess_input input
+{
+	margin-right: 10px;
+	padding: 0 10px;
+	border-radius: 8px;
+	height: 40px;
+	font-size: 16px;
+	outline: none;
+	background: transparent;
+	transition: 0.2s;
+}
+
+.guess_input input:focus
+{
+	background: #000;
+	color: #fff;
+}
+
+.hint_box
+{
+	width: 100%;
+}
+
+.hint_box p
+{
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+	background: rgba(240, 240, 240, 0.4);
+	backdrop-filter: blur(10px);
+	box-shadow: 15px 15px 30px #bebebe;
+	border-radius: 12px;
+	padding: 8px 16px;
+}
+
+.box_side .btn
+{
+	width: 100%;
+	height: 40px;
+	margin: 4px 0;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	background: transparent;
+	cursor: pointer;
+}
+
+.box_side .btn:hover
+{
+	transform: scale(1.05);
+}
+
+.btn_container .promptBtn
+{
+	background: #000;
+	color: #fff;
+}
+
+.btn_container .generateBtn i
+{
+	color: black;
+	margin-left: 10px;
+}
+
+.result_box
+{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.result_box .result_show
+{
+	font-size: 32px;
+	text-align: center;
+	padding: 0 20px;
+}
+
+.result_box .refesh_page_main button
+{
+	width: 100%;
+}
+
+.result_box .refesh_page_main .auto_refesh_content
+{
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: capitalize;
+	text-align: center;
+	display: none;
+}
+
+.auto_refesh_content #refresh_count
+{
+	font-size: 14px;
+	font-weight: 800;
+}
+
+.rule_box_btn
+{
+	margin-top: 40px;
+	text-align: center;
+}
+
+.ruleBookBtn
+{
+	padding: 8px 16px;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+
+
+
+
+
+/* <----- R E S P O N S I V E  D E S I G N ----->  */
+
+@media(max-width: 1440px)
+{
+	.pattern1
+	{
+		position: absolute;
+		width: 800px;
+		height: auto;
+		transform: rotate(45deg);
+		left: -40%;
+		top: 0;
+/*		transform: translate(0, -50%);*/
+}
+
+.pattern2
+{
+	position: absolute;
+	width: 800px;
+	height: auto;
+	right: -20%;
+	bottom: 0;
+}
+}
+
+@media(max-width: 1024px)
+{
+	.pattern1
+	{
+		position: absolute;
+		width: 800px;
+		height: auto;
+		transform: rotate(45deg);
+		left: 0%;
+		top: -60%;
+		opacity: 0.8;
+	}
+
+	.pattern2
+	{
+		position: absolute;
+		width: 600px;
+		height: auto;
+		right: 0;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		bottom: -20%;
+		opacity: 0.8;
+	}
+}
+
+
+@media(max-width: 768px)
+{
+	.main
+	{
+		height: auto;
+		padding: 40px 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.creator_info_box
+	{
+		position: relative;
+		bottom: 0;
+		left: 0;
+		margin-top: 20px;
+	}
+
+	.rule_box
+	{
+		position: absolute;
+		background: white;
+		top: 0;
+		bottom: 0;
+		left: -100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: 0 40px;
+		z-index: 999;
+		transition: 0.5s, opacity 300ms ease-in-out;
+	}
+
+	.openRuleBook
+	{
+		left: 0%;
+	}
+
+	.container
+	{
+		padding: 0 20px;
+	}
+
+	.container_head
+	{
+		text-shadow: 0px 0px 10px #000;
+		color: #fff;
+		font-size: 26px;
+	}
+
+	.container .game_box
+	{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.game_box .side2
+	{
+		border-left: 0px;
+		border-top: 2px dotted black;
+		margin-top: 20px;
+	}
+
+	.guess_input input
+	{
+		width: 100%;
+	}
+
+	.hint_box
+	{
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.hint_box p
+	{
+		padding: 10px 16px;
+	}
+
+	.btn_container .promptBtn
+	{
+		background: #000;
+		color: #fff;
+		width: 200px;
+	}
+
+	.result_box #result
+	{
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+
+@media(max-width: 480px)
+{
+
+	.pattern1
+	{
+		position: absolute;
+		width: 600px;
+		height: auto;
+		transform: rotate(0deg);
+		right: 0%;
+		top: -20%;
+		opacity: 0.8;
+	}
+
+	.pattern2
+	{
+		position: absolute;
+		width: 600px;
+		height: auto;
+		right: 0;
+		left: 0%;
+		transform: translate(0%, 0%);
+		bottom: -30%;
+		opacity: 0.8;
+	}
+
+	.profilePic
+	{
+		position: absolute;
+		width: 50px;
+	}
+
+	.rule_box
+	{
+		left: -100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+
+	.openRuleBook
+	{
+		left: 0%;
+	}
+
+	.container
+	{
+		padding: 0 20px;
+	}
+
+	.container_head
+	{
+		text-shadow: 0px 0px 10px #000;
+		color: #fff;
+		margin-top: 20px;
+		font-size: 26px;
+	}
+
+	.container .game_box
+	{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		background: rgba(240, 240, 240, 0.6);
+		backdrop-filter: blur(10px);
+		box-shadow: 6px 6px 30px #bebebe;
+	}
+
+	.game_box .side2
+	{
+		border-left: 0px;
+		border-top: 2px dotted black;
+		margin-top: 20px;
+	}
+
+	.guess_input input
+	{
+		width: 100%;
+	}
+
+	.inner_box .inner_box_content p
+	{
+		text-align: center;
+		font-weight: 700;
+		font-size: 14px;
+	}
+	
+	.inner_box .inner_box_content p span
+	{
+		font-size: 52px;
+	}
+
+	.hint_box
+	{
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.hint_box p
+	{
+		padding: 10px 16px;
+		font-size: 14px;
+	}
+
+	.result_box #result
+	{
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.rule_box_btn
+	{
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.ruleBookBtn
+	{
+		padding: 8px 16px;
+		border-radius: 8px;
+		font-size: 14px;
+		background: rgba(250, 250, 250, 0.6);
+		font-weight: 700;
+		cursor: pointer;
+	}
+}
